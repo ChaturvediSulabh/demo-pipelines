@@ -1,0 +1,16 @@
+pipelines(
+  agent any
+  environment {
+    NAME = "A-SAMPLE-PIPELINE-01"
+  }
+  stages {
+    stage ('Audit') {
+      steps {
+        sh '''
+           docker version
+           git version
+        '''
+      }
+    }
+  }
+)
