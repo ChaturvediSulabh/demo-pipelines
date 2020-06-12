@@ -1,10 +1,12 @@
-pipeline{
-  agent{
+pipeline {
+  agent {
     docker {image "golang"}
   }
-  stages{
-    steps{
-      sh  'go version'
+  stages {
+    stage('pre-flight') {
+      steps {
+        sh  'go version'
+      }
     }
   }
 }
