@@ -7,7 +7,7 @@ pipeline {
     stage ('Audit') {
       steps {
         sh '''
-          k3s version
+          kubectl version short
         '''
       }
     }
