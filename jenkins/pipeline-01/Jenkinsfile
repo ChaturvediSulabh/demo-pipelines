@@ -7,13 +7,8 @@ pipeline {
     stage ('Audit') {
       steps {
         sh '''
-          uname -a
+          k3s version
         '''
-      }
-    }
-    stage ('Build') {
-      steps {
-        echo "BUILD ENVIORNOMENT::${env}"
       }
     }
   }
